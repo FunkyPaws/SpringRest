@@ -7,9 +7,9 @@ public class Post {
     private Long PostID;
     private String Text;
     private Date DateTime;
-    private model.User User;
+    private User User;
 
-    public Post(Long postID, String text, Date dateTime, model.User user) {
+    public Post(Long postID, String text, Date dateTime, User user) {
         PostID = postID;
         Text = text;
         DateTime = dateTime;
@@ -43,11 +43,11 @@ public class Post {
         DateTime = dateTime;
     }
 
-    public model.User getUser() {
+    public User getUser() {
         return User;
     }
 
-    public void setUser(model.User user) {
+    public void setUser(User user) {
         User = user;
     }
 

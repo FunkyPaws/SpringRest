@@ -7,15 +7,13 @@ public class User {
     private String Password;
     private String Biography;
     private String Location;
-    private String Website;
 
-    public User(Long userID, String name, String password, String biography, String location, String website) {
+    public User(Long userID, String name, String password, String biography, String location) {
         UserID = userID;
         Name = name;
         Password = password;
         Biography = biography;
         Location = location;
-        Website = website;
     }
 
     public User() {
@@ -61,14 +59,6 @@ public class User {
         Location = location;
     }
 
-    public String getWebsite() {
-        return Website;
-    }
-
-    public void setWebsite(String website) {
-        Website = website;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -77,7 +67,6 @@ public class User {
                 ", Password='" + Password + '\'' +
                 ", Biography='" + Biography + '\'' +
                 ", Location='" + Location + '\'' +
-                ", Website='" + Website + '\'' +
                 '}';
     }
 }
