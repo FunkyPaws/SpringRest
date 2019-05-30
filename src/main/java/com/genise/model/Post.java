@@ -7,18 +7,17 @@ import java.util.Date;
 public class Post {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long PostID;
     private String Text;
-    private Date DateTime;
 
     @ManyToOne
+    @JoinColumn(name = "UserID")
     private User User;
 
-    public Post(Long postID, String text, Date dateTime, User user) {
+    public Post(Long postID, String text, User user) {
         PostID = postID;
         Text = text;
-        DateTime = dateTime;
         User = user;
     }
 
@@ -41,14 +40,6 @@ public class Post {
         Text = text;
     }
 
-    public Date getDateTime() {
-        return DateTime;
-    }
-
-    public void setDateTime(Date dateTime) {
-        DateTime = dateTime;
-    }
-
     public User getUser() {
         return User;
     }
@@ -62,7 +53,6 @@ public class Post {
         return "Post{" +
                 "PostID=" + PostID +
                 ", Text='" + Text + '\'' +
-                ", DateTime=" + DateTime +
                 ", User=" + User +
                 '}';
     }
