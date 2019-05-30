@@ -1,7 +1,7 @@
-package mock;
+package com.genise.mock;
 
-import model.Post;
-import model.User;
+import com.genise.model.Post;
+import com.genise.model.User;
 
 import java.util.ArrayList;
 import java.util.Date;

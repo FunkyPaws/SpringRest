@@ -1,18 +1,14 @@
-package main;
+package com.genise.mock;
 
-import mock.MockData;
-import model.Post;
-import model.User;
+import com.genise.model.Post;
+import com.genise.model.User;
 import org.springframework.web.bind.annotation.*;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.annotation.PostConstruct;
 import java.util.Date;
 import java.util.List;
 
 @RestController
-public class PostController {
-
+public class MockPostController {
     MockData mockData = MockData.getInstance();
 
 //    @RequestMapping("/post")
