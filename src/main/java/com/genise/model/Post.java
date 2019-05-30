@@ -1,9 +1,6 @@
 package com.genise.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -14,6 +11,8 @@ public class Post {
     private Long PostID;
     private String Text;
     private Date DateTime;
+
+    @ManyToOne
     private User User;
 
     public Post(Long postID, String text, Date dateTime, User user) {
